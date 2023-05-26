@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLTELayout/AdminLTELayout.cshtml";
+}
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid ">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1>Grafik Karyawan Setiap Departemen</h1>
+                <!-- STACKED BAR CHART -->
+                <div class="card card-success mt-3">
+                    <div class="card-header">
+                        <h3 class="card-title">Charts Karyawan</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart">
+                            <canvas id="stackedBarChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col (RIGHT) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+@section script{
+    <script src="~/js/DepartmentJS.js"></script>
+    <script src="~/js/Charts.js"></script>
+    <!-- ChartJS -->
+    <script src="~/AdminLTE-3.2.0/plugins/chart.js/Chart.min.js"></script>
+}
+

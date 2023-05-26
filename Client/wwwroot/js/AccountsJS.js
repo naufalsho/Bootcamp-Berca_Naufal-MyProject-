@@ -19,11 +19,10 @@
                     timer: 1500
                 }).then((successAllert) => {
                     if (successAllert) {
-                        debugger;
+                        //debugger;
                         //set token to session
                         var getToken = result.token;
                         sessionStorage.setItem('token', getToken); // jwt token to session
-
                         location.replace("/Departments");
                     } else {
                         location.replace("/Departments");
